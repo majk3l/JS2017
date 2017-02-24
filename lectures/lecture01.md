@@ -240,9 +240,13 @@ print(A[i:j]) #2
 
 Wyjście:
 
- ```W```
+ ``` 
+ W 
+ ```
  
- ```Witaj```
+ ```
+ Witaj
+ ```
 
 Uwagi:
 - Indeksowanie rozpoczynamy od 0
