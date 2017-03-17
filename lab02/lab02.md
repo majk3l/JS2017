@@ -29,9 +29,12 @@ Każdym elementem listy powinna być krotka, będąca parą (ranga, kolor). Przy
  
  # &#127137;
  
- reprezentowany będzie jako ```('A', 's')```
+ reprezentowany będzie jako ```('A', 's')```. Lista powinna zawierać 52 elementy (13 rang * 4 kolory).
  
 **#2.2:** ```shuffle_deck(deck)``` - przyjmuje listę kart, zwraca karty potasowane (permutacja). Skorzystaj z: https://docs.python.org/3/library/random.html
 
 **#2.3:** ```deal(deck, n)``` - przyjmuje talię kart (```deck```) oraz liczbę graczy (```n```), zwraca n-elementową listę 5-elementowych list z kartami rozdanymi graczom. Każda 5-elementowa lista kart gracza zawiera 5 krotek reprezentujących kartę.  
 
+--- 
+
+Zasady gry: https://pl.wikipedia.org/wiki/Poker 
