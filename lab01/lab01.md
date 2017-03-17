@@ -1,61 +1,39 @@
-# Język Python – podstawowe informacje
+# Laboratorium #01 - Zadania do samodzielnego wykonania
 
-Python to język skryptowy, interpretowany - co oznacza, że piszemy skrypt, a następnie
-wykonujemy go za pomocą interpretera. Istnieją dwie główne wersje Pythona, Python 2
-i Python 3. Na zajęciach laboratoryjnych wykorzystywana będzie wersja 3.,
+## Zadania obowiązkowe:
 
-Przez skrypt rozumiemy plik tekstowy o rozszerzeniu .py. By go wykonać wydajemy
-polecenie:
-
-```
-python nazwa_pliku.py
+### #1:
+Napisz prosty skrypt, który przyjmuje jako parametry dwie liczby oraz znak operacji (+, -, *) i wykonuje na nich proste operacje arytmetyczne. Skrypt zapisz pod nazwą ```arithmetics.py```. Do porównywania łańcuchów tekstowych wykorzystaj operator ==. Parametry powinny być oddzielone spacjami. Przykład działania (skrypt uruchomiony z wiersza poleceń):
+```bash
+python arithmetics.py 2 + 4
+6
 ```
 
-## Hello, World!
+### #2:
+Napisz skrypt, który wylicza na podstawie zadanego argumentu (daty w postacirrrr-mm-dd) liczbę dni od tego czasu do daty aktualnej. Skrypt zapisz pod nazwą ```days.py```. Skorzystaj z: https://docs.python.org/3/library/datetime.html#date-objects
 
-Do wypisywania łańcuchów tekstowych w Pythonie służy polecenie print. Uruchom skrypt hello_world.py z repozytorium i zaobserwuj jego działanie.
-
-```python
-print("""Hello world""")
-print("Hello again")
-print('Hello again')
-# print('Ta linia rozpoczynajaca sie od # jest komentarzem i nie zostanie wykonana')
+### #3:
+Napisz skrypt, który policzy ile argumentów podanych przez użytkownika (oddzielonych spacjami) ma 3 lub więcej znaków. Skrypt zapisz pod nazwą ```arguments.py```. Przykład działania:
+```bash
+python arguments.py o co chodzi z tym Pythonem
+3
 ```
-
-
-W Pythonie napisy zamykane są poprzez pojedynczy lub podwójny cudzysłów. Istnieje
-możliwość ograniczenia tekstu potrójnymi cudzysłowami (dowolnego typu) - tekst będzie
-mógł wtedy zajmować więcej niż jeden wiersz.
-
-Kolejny fragment kodu prezentuje wykorzystanie operatora indeksowania. Indeksowanie, podobnie jak w C++ czy Javie, rozpoczynamy od 0. 
-Wykonaj poniższy przykład w środowisku Pythona:
-
-```python
-A = "Welcome to Python's world!"
-i = 0
-j = 7
-print(A[0]) #1
-print(A[i:j]) #2
+zmodyfikuj skrypt tak, aby z listy argumentów, wybierane były argumenty o liczbie
+znaków 3 lub więcej, a następnie łączone w odwrotnej kolejności w napis. Uzyskany w ten sposób napis należy wyświetlić. Przykład:
+```bash
+python arguments.py o co chodzi z tym Pythonem
+3
+Pythonem tym chodzi
 ```
-Wyjściem skryptu są:
+### #4:
+Napisz program ```quadratic.py```  do obliczania miejsc zerowych równania kwadratowego. Współczynniki (a, b, c) podawane z wiersza poleceń. Wyjście programu powinno być następujące:
+- pierwsza linia wyjścia: liczba miejsc zerowych
+- druga linia wyjścia: miejsca zerowe oddzielone spacją, o ile istnieją. 
 
-1. pierwszy znak łańcucha, 
-2. określony jego fragment fragment łańcucha tekstowego, który jest ograniczony półotwartym przedziałem.  Taki fragment nazywamy wycinkiem (ang. slice).
+W przypadku braku miejsc zerowych skrypt powinien wypisać linię zawierającą liczbę 0. Przykład:
 
-Indeksowanie  w formie A[i:j], oznacza: „Zwróć wszystko z A od
-przesunięcia i aż do przesunięcia j, ale bez elementu A[j]". Dopuszczalnymi indeksami są nie tylko dodatnie, ale i ujemne liczby całkowite. Oznaczają
-one indeksowanie od końca. Wykonaj poniższy kod:
-
-```python
-print (A[-1]) # Pierwszy element od konca, formalnie taki zapis jest rownowazny A[len(A)-1]
-print (A[-2]) # Drugi element od końca
-print (a[-5:])  
+```bash
+python quadratic.py 1 4 3
+2
+-1.0 -3.0
 ```
-
-## Wcięcia
-
-
-
-
-
-
