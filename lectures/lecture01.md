@@ -13,7 +13,7 @@
 # Język skryptowy
 
 - Wykład
-  - liczba godzin: 8 
+  - liczba godzin: 10 (stacjonarne) lub 10 (niestacjonarne) 
   - zaliczenie: test (>50%)
 - Laboratorium
   - liczba godzin: 15 (stacjonarne) lub 12 (niestacjonarne)
@@ -33,16 +33,28 @@
 
 ---
 
+# Na następne laboratoria...
+
+1. (Wszyscy) https://git-scm.com/book/pl/v1/Pierwsze-kroki-Wprowadzenie-do-kontroli-wersji
+  Rozdziały (przeczytać, wykonać przykłady, zapamiętać) :
+   - Pierwsze kroki
+   - Podstawy Gita
+
+2. (Moja grupa - lab3) Założyć darmowe konto w serwisie github.com
+
+---
+
 # Zagadnienia
 
-1.  **Wstęp do języka Python** 
-2.	**Typy, operatory, instrukcje podstawowe**
-3.	Funkcje  
-4.	Klasy
-5.	Moduły
-6.	Wyjątki
-7.	Narzędzia wbudowane
-8.	Typowe zadania w języku Python: manipulacja strukturami, danymi, plikami i programami
+1.  **Wstęp do języka Python**.	**Typy, operatory, instrukcje podstawowe**.
+2.	Funkcje i klasy
+3.	Moduły
+4.	Wyjątki
+5.	Narzędzia wbudowane
+6.	Typowe zadania w języku Python: manipulacja strukturami, danymi, plikami i programami
+7.  Numpy
+
+**i inne**
 
 ---
 
@@ -82,6 +94,161 @@
 
 ---
 
+# Co mogę zrobić za pomocą Pythona?
+
+## *Przegląd potencjalnych zastosowań i bibliotek*
+
+---
+
+# Programowanie systemowe
+
+Tworzenie przenośnych i łatwych w utrzymaniu narzędzi służących do administrowania systemami. Przykłady:
+
+- przeszukiwania plików i drzew katalogów
+- uruchamianie innych programów 
+- wykonywanie przetwarzania równoległego za pomocą procesów i wątków
+
+---
+
+# Programowanie systemowe
+
+## *Po co używać Pythona skoro jest Bash?*
+
+---
+
+# Bash vs Python 
+### Porównanie pod kątem programowania narzędzi powłoki
+
+**Bash**
+\+ wszechobecny  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \+ łatwe łączenie komend, np: 
+```bash
+ls -l|tail -n +2|sed 's/\s\s*/ /g'|cut -d ' ' -f 3|sort|uniq 
+```
+\- nieintuicyjna składnia, duże skrypty często nieczytelne
+\- brak natywnego wsparcia dla zaaw. funkcji (np. parsowanie XML)
+
+**Python**
+\+ łatwe tworzenie i utrzymanie kodu &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  \+ OOP
+\- wymaga instalacji, czasami dodatkowych pakietów, etc.
+
+---
+
+# Bash -  (nie)intuicyjność składni
+
+Efektem wywołania poniższego kodu (plik bashtest.sh):
+
+```bash
+#!/bin/bash
+var = 10 
+```
+będzie błąd:
+```shell
+./bashtest.sh: line 2: var: command not found
+```
+Natomiast:
+```bash
+#!/bin/bash
+var=10 
+```
+wykona się poprawnie.
+
+---
+
+# Bash -  (nie)intuicyjność składni
+
+
+
+```bash
+{ ls -l; df; echo "Done." }
+# bash: syntax error: unexpected end of file
+
+{ ls -l; df; echo "Done."; }
+# wykona się poprawnie   ^     ### potrzebny średnik
+
+ls -l; df; echo "Done."
+# gdy polecenia nie są w bloku kodu, średnik 
+# nie jest potrzebny
+```
+---
+
+# Skrypty internetowe
+
+Biblioteka standardowa Pythona zawiera moduły pozwalające na wykonywanie różnych zadań sieciowych zarówno w trybie klienta, jak i serwera.
+
+- komunikacja za pomocą gniazd
+- pobieranie całych stron internetowych za pomocą ich URL 
+- analizowanie i generowanie XML, HTML
+- obsługa protokołu FTP
+---
+
+# Obsługa baz danych
+
+- Dla Pythona istnieją interfejsy do wszystkich najpopularniejszych relacyjnych baz danych
+- Moduł do serializacji i deserializacji obiektów (```pickle```)
+- Osadzony silnik bazy danych SQL (SQLite) jest standardową częścią samego języka (od wersji 2.5).
+---
+
+# Obliczenia numeryczne i programowanie naukowe
+
+- ```numpy``` - szybkie obliczenia na macierzach
+- ```scipy```- obliczenia numeryczne i naukowe
+- ```scikit-learn``` - uczenie maszynowe
+- OpenCV - biblioteka C/C++, metody widzenia maszynowego (computer vision), istnieje interfejs do Pythona
+
+---
+# Gry komputerowe & grafika 
+
+- Programowanie gier oraz multimediów dzięki systemowi ```pygame```.
+- Komunikacja przez port szeregowy w systemach Windows, Linux i innych dzięki rozszerzeniu ```PySerial```.
+- Przetwarzanie grafiki wykonywane za pomocą ```PyOpenGL```.
+-  Blender (program do modelowania) jest częściowo napisany w Pythonie, umożliwia rozszerzenia za pomocą skrytpów.
+
+---
+
+# GUI
+
+- TkInter
+- PySide
+- PyQt
+i wiele innych.
+
+---
+
+# Backend serwisów internetowych
+
+Django - wolny i otwarty framework przeznaczony do tworzenia aplikacji internetowych, napisany w Pythonie. Django realizuje wzorzec architektoniczny model-template-view (pokrewny z MVC).
+
+Wśród dobrze znanych witryn, które używają Django, znajdują się witryny Pinterest, Instagram, Fundacji Mozilla, Public Broadcasting Service i The Washington Times.
+
+<sub><sup>źródło: https://pl.wikipedia.org/wiki/Django_(framework)
+</sup></sub>
+
+---
+
+# Czy python przyda się podczas zajęć na UR? 
+
+---
+
+## Przedmiot: Aplikacje internetowe 2
+
+Celem przedmiotu jest (cytat za syllabusem):
+
+<sub>*"Nabycie umiejętności w posługiwaniu się frameworkami umożliwiającymi rozszerzającymi możliwości języka Python pod kątem tworzenia aplikacji webowych."*</sub>
+
+<sub>*"Zapoznanie studentów z (...) oraz możliwościami i funkcjami frameworka Django."*</sub>
+
+<sub>*"Nabycie umiejętności tworzenia projektowanie i tworzenia zaawansowanych aplikacji webowych przy użyciu wybranych narzędzi."*</sub>
+
+---
+## Przedmiot: Analiza i przetwarzanie  obrazów
+
+&nbsp;
+
+- Przedmiot na studiach magisterskich
+- Prowadzący: ten sam co prowadzi Język skryptowy :) 
+- Na zajęciach laboratoryjnych: OpenCV + Python 
+---
+
 # Wykonywanie programów
 
 ## - Interaktywny wiersz poleceń
@@ -115,6 +282,21 @@ $ python hello.py
 Hello world!
 ```
 
+---
+
+# ```import```
+
+Kod źródłowy Pythona pogrupowany jest w moduły i pakiety (więcej o modułach na kolejnych wykładach). Słowo kluczowe ```import``` pozwoli na załadowanie elementów z modułu:
+
+```python
+import module_name
+from module_name import element_name
+from module_name import *
+```
+```python
+from decimal import Decimal
+from fractions import Fraction
+```
 ---
 
 # Typy danych
@@ -162,25 +344,12 @@ Hello world!
 - całkowite 
 - zmiennoprzecinkowe
 - *zespolone*
-- *stałoprzecinkowe*
-- *ułamki*
+- *Decimal* (ułamki dziesiętne)
+- *Fraction* (ułamki zwykłe)
 
 ---
 
-# ```import```
 
-Kod źródłowy Pythona pogrupowany jest w moduły i pakiety (więcej o modułach na kolejnych wykładach). Słowo kluczowe ```import``` pozwoli na załadowanie elementów z modułu:
-
-```python
-import module_name
-from module_name import element_name
-from module_name import *
-```
-```python
-from decimal import Decimal
-from fractions import Fraction
-```
----
 # Operatory arytmetyczne
 operator| znaczenie
 ---|---
@@ -240,13 +409,9 @@ print(A[i:j]) #2
 
 Wyjście:
 
- ``` 
- W 
- ```
+ ```W```
  
- ```
- Witaj
- ```
+ ```Witaj```
 
 Uwagi:
 - Indeksowanie rozpoczynamy od 0
@@ -276,7 +441,6 @@ Zapis  postaci ```A[-1]``` jest równoważny ```A[len(A)-1]```, gdzie ```len(A)`
 # jaki będzie efekt działania ostatniej instrukcji?
 
 ```
----
 ---
 # Łańcuchy tekstowe
 
@@ -312,10 +476,12 @@ to jest napis
 
 # Listy
 
+
+
 - Kontenery ogólnego przeznaczenia, uporządkowane pod względem pozycji.
 - Przechowują dowolny typ obiektów, także inne listy.
 - Obiekty w zakresie jednej listy mogą być różnego typu.
-- Są modyfikowalne (ang. *mutable*)
+- Są modyfikowalne (ang. *mutable*).
 
 
 ---
@@ -382,7 +548,7 @@ if testA: # test logiczny
     ...                      # O  D
     instrukcjaAn             # K  U
 elif testB: # test opcjonalny
-    instrukcjaB1             # B  K	  
+    instrukcjaB1             # B  K  
     ...                      # L  O
     ...                      # O  D
     instrukcjaBn             # K  U
@@ -528,5 +694,3 @@ for item in sequence: #
 else: # opcjonalny blok else
     instrukcje 
 ``` 
-
-
