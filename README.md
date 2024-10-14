@@ -1,3 +1,5 @@
+Nowsza wersja kursu tutaj [https://github.com/majk3l/python2024
+](https://github.com/majk3l/python2024)
 # Język skryptowy
 
 - Liczba godzin: 15 (7 laboratoriów x 2 godziny + kolokwium 1 godzina).
